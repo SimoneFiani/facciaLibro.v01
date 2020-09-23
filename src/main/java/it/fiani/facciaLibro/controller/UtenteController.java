@@ -37,7 +37,7 @@ public class UtenteController {
 	@PostMapping("/")
 	public String aggiungiUtente(Utente utente) {
 		utenteService.salva(utente);
-		return "redirect:/utenti";
+		return "redirect:/utenti/";
 	}
 
 	@GetMapping("/{id}")

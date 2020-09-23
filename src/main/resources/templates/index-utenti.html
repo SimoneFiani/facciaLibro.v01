@@ -1,16 +1,29 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html xmlns:th="http://www.tymeleaf.org" lang="it">
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Index Utente</title>
+<title>Index Utenti</title>
+
 </head>
+
 <body>
 
-<h1>Lista Utenti</h1>
+	<h1>Lista Utenti</h1>
 
-<p>di seguito la lista degli utenti: </p>
+	<table>
+		<tbody>
+			<tr th:each="u: ${listaUtetni}">
+				<td th:text="${u.nome}"></td>
+				<td th:text="${u.cognome}"></td>
+				<td th:text="${u.eta}"></td>
+				<td th:text="${u.indirizzoResidenza}"></td>
+				<td th:text="${u.numeroTelefono}"></td>
 
-<p th:text="${listaAnimali}"> </p>
+			</tr>
+		</tbody>
+	</table>
+	<a href="/utenti/new">Aggiungi utente</a>
 
 </body>
+
 </html>

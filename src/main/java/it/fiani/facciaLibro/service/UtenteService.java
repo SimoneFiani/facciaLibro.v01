@@ -21,6 +21,7 @@ public class UtenteService {
 	}
 
 	public void salva(Utente utente) {
+		System.out.println(utente);
 		utente.setInstanteCreazione(LocalDateTime.now());
 		utente.setInstanteUltimoAggiornamento(LocalDateTime.now());
 		utenteRepository.save(utente);
