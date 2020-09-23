@@ -9,10 +9,10 @@
 <body>
 
 	<h1>Lista Utenti</h1>
-
+	
 	<table>
 		<tbody>
-			<tr th:each="u: ${listaUtetni}">
+			<tr th:each="u: ${listaUtenti}">
 				<td th:text="${u.nome}"></td>
 				<td th:text="${u.cognome}"></td>
 				<td th:text="${u.eta}"></td>
