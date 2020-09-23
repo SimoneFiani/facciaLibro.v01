@@ -41,8 +41,11 @@ public class UtenteController {
 	}
 
 	@GetMapping("/{id}")
-	public String idUtente() {
-		return null;
+	public String idUtente(@PathVariable Long id, Model datiInOutput) {
+		Utente utente = utenteService.cercaUtentePerId(id);
+		datiInOutput.addAttribute("utente", utente);
+
+		return "dettagli-utente";
 	}
 
 	@DeleteMapping("/{id}")

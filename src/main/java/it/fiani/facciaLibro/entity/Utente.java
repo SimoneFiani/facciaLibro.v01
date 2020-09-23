@@ -20,7 +20,9 @@ public class Utente {
 	private String cognome;
 	private int eta;
 	private String indirizzoResidenza;
-	private String numeroTelefono;
+
+	@OneToMany
+	private List<NumeroTelefono> numeroTelefono;
 
 	@OneToMany
 	private List<Post> listaPost;
@@ -68,11 +70,11 @@ public class Utente {
 		this.indirizzoResidenza = indirizzoResidenza;
 	}
 
-	public String getNumeroTelefono() {
+	public List<NumeroTelefono> getNumeroTelefono() {
 		return numeroTelefono;
 	}
 
-	public void setNumeroTelefono(String numeroTelefono) {
+	public void setNumeroTelefono(List<NumeroTelefono> numeroTelefono) {
 		this.numeroTelefono = numeroTelefono;
 	}
 

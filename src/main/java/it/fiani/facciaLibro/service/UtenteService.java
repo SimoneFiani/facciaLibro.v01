@@ -33,4 +33,9 @@ public class UtenteService {
 		utenteRepository.deleteById(id);
 	}
 
+	public Utente cercaUtentePerId(Long id) {
+		return utenteRepository.findById(id).get();
+
+	}
+
 }
