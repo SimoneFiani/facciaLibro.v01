@@ -1,6 +1,6 @@
 package it.fiani.facciaLibro.service;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +21,8 @@ public class UtenteService {
 	}
 
 	public void salva(Utente utente) {
-		utente.setInstanteCreazione(LocalTime.now());
-		utente.setInstanteUltimoAggiornamento(LocalTime.now());
+		utente.setInstanteCreazione(LocalDateTime.now());
+		utente.setInstanteUltimoAggiornamento(LocalDateTime.now());
 		utenteRepository.save(utente);
 
 	}

@@ -15,7 +15,7 @@ import it.fiani.facciaLibro.entity.Post;
 import it.fiani.facciaLibro.service.PostService;
 
 @Controller
-@RequestMapping("/utente/id/post")
+@RequestMapping("/post")
 public class PostController {
 
 	@Autowired

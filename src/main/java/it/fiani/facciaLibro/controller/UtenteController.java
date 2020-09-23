@@ -26,12 +26,12 @@ public class UtenteController {
 	public String index(Model datiInOutput) {
 		List<Utente> listaUtenti = utenteService.mostraListaUtenti();
 		datiInOutput.addAttribute("listaUtenti", listaUtenti);
-		return "index-utente";
+		return "index-utenti";
 	}
 
 	@GetMapping("/new")
 	public String formUtente() {
-		return "form-utente";
+		return "form-utenti";
 	}
 
 	@PostMapping("/")

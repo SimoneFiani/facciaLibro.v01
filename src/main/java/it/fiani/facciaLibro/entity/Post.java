@@ -1,6 +1,6 @@
 package it.fiani.facciaLibro.entity;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,8 +14,8 @@ public class Post {
 	private Long id;
 
 	private String testoPost;
-	private LocalTime instanteCreazione;
-	private LocalTime instanteUltimoAggiornamento;
+	private LocalDateTime instanteCreazione;
+	private LocalDateTime instanteUltimoAggiornamento;
 
 	public Long getId() {
 		return id;
@@ -33,19 +33,19 @@ public class Post {
 		this.testoPost = testoPost;
 	}
 
-	public LocalTime getInstanteCreazione() {
+	public LocalDateTime getInstanteCreazione() {
 		return instanteCreazione;
 	}
 
-	public void setInstanteCreazione(LocalTime instanteCreazione) {
+	public void setInstanteCreazione(LocalDateTime instanteCreazione) {
 		this.instanteCreazione = instanteCreazione;
 	}
 
-	public LocalTime getInstanteUltimoAggiornamento() {
+	public LocalDateTime getInstanteUltimoAggiornamento() {
 		return instanteUltimoAggiornamento;
 	}
 
-	public void setInstanteUltimoAggiornamento(LocalTime instanteUltimoAggiornamento) {
+	public void setInstanteUltimoAggiornamento(LocalDateTime instanteUltimoAggiornamento) {
 		this.instanteUltimoAggiornamento = instanteUltimoAggiornamento;
 	}
 

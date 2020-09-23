@@ -1,5 +1,6 @@
 package it.fiani.facciaLibro.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class PostService {
 	}
 
 	public void salva(Post post) {
+		post.setInstanteCreazione(LocalDateTime.now());
+		post.setInstanteCreazione(LocalDateTime.now());
 		postRepository.save(post);
 
 	}
