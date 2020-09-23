@@ -24,7 +24,7 @@ public class UtenteController {
 	public String index(Model datiInOutput) {
 		List<Utente> listaUtenti = utenteService.mostraListaUtenti();
 		datiInOutput.addAttribute("listaUtenti", listaUtenti);
-		return "index";
+		return "index-utente";
 	}
 
 	@GetMapping("/new")
@@ -36,6 +36,11 @@ public class UtenteController {
 	public String aggiungiUtente(Utente utente) {
 		utenteService.salva(utente);
 		return "redirect:/utenti";
+	}
+
+	@GetMapping("/{id}")
+	public String idUtente() {
+		return null;
 	}
 
 }
