@@ -1,13 +1,13 @@
-Creare un applicazione FacciaLibro v0.1.
+Creare un applicazione FacciaLibro v0.1. VVV
 
 (Creare tutta la struttura portante per l'inserimento di un nuovo utente,
- e per la lettura di un utente in base all'ID)
+ e per la lettura di un utente in base all'ID) VVV
 
 Un utente, oltre ai campi ovvii, dovrà avere un Indirizzo di residenza.
-Degli eventuali riferimenti telefonici.
+Degli eventuali riferimenti telefonici. VVV
 
 Nella pagina principale di faccialibro, deve apparire una lista di tutti i post 
-inseriti dai vari utenti.
+inseriti dai vari utenti. ???
 
 Ogni post dovrà avere un Titolo (header), un testo (paragraph), il nome dell'utente
  che l'ha postato, e la data di creazione del post.

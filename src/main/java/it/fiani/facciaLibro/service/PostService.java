@@ -32,4 +32,9 @@ public class PostService {
 
 	}
 
+	public Post cercaPostPerId(Long id) {
+		return postRepository.findById(id).get();
+
+	}
+
 }

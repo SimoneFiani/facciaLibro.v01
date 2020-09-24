@@ -40,7 +40,9 @@ public class PostController {
 	}
 
 	@GetMapping("/{id}")
-	public String idPost(@PathVariable Long id) {
+	public String idPost(@PathVariable Long id, Model datiInOutput) {
+		Post post = postService.cercaPostPerId(id);
+		datiInOutput.addAttribute("post", post);
 		return null;
 	}
 
