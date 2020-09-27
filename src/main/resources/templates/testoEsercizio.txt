@@ -7,10 +7,10 @@ Un utente, oltre ai campi ovvii, dovrà avere un Indirizzo di residenza.
 Degli eventuali riferimenti telefonici. VVV
 
 Nella pagina principale di faccialibro, deve apparire una lista di tutti i post 
-inseriti dai vari utenti. ???
+inseriti dai vari utenti. VVV
 
 Ogni post dovrà avere un Titolo (header), un testo (paragraph), il nome dell'utente
- che l'ha postato, e la data di creazione del post.
+ che l'ha postato, e la data di creazione del post. VVV
 
 Nella pagina principale, dovrà esserci un pulsante "Aggiungi", che mi farà aprire una
  pagina con un form, in cui posso creare un nuovo post, inserendo un titolo, un testo,

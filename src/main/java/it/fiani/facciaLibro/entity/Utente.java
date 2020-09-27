@@ -24,8 +24,8 @@ public class Utente {
 	@OneToMany
 	private List<NumeroTelefono> numeroTelefono;
 
-	@OneToMany
-	private List<Post> listaPost;
+//	@OneToMany
+//	private List<Post> listaPost;
 
 	private LocalDateTime instanteCreazione;
 	private LocalDateTime instanteUltimoAggiornamento;
@@ -78,14 +78,6 @@ public class Utente {
 		this.numeroTelefono = numeroTelefono;
 	}
 
-	public List<Post> getListaPost() {
-		return listaPost;
-	}
-
-	public void setListaPost(List<Post> listaPost) {
-		this.listaPost = listaPost;
-	}
-
 	public LocalDateTime getInstanteCreazione() {
 		return instanteCreazione;
 	}
@@ -100,14 +92,6 @@ public class Utente {
 
 	public void setInstanteUltimoAggiornamento(LocalDateTime instanteUltimoAggiornamento) {
 		this.instanteUltimoAggiornamento = instanteUltimoAggiornamento;
-	}
-
-	@Override
-	public String toString() {
-		return "Utente [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", eta=" + eta + ", indirizzoResidenza="
-				+ indirizzoResidenza + ", numeroTelefono=" + numeroTelefono + ", listaPost=" + listaPost
-				+ ", instanteCreazione=" + instanteCreazione + ", instanteUltimoAggiornamento="
-				+ instanteUltimoAggiornamento + "]";
 	}
 
 }
