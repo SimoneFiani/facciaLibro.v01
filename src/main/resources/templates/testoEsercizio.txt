@@ -14,7 +14,7 @@ Ogni post dovrà avere un Titolo (header), un testo (paragraph), il nome dell'ut
 
 Nella pagina principale, dovrà esserci un pulsante "Aggiungi", che mi farà aprire una
  pagina con un form, in cui posso creare un nuovo post, inserendo un titolo, un testo,
-  e l'id di un utente esistente.
+  e l'id di un utente esistente.VVV
 
 Nella pagina principale, se clicco sul nome di un utente, mi apre una pagina con i 
 dettagli di quell'utente, ed una lista di tutti i SUOI post.
@@ -22,7 +22,7 @@ dettagli di quell'utente, ed una lista di tutti i SUOI post.
 Nella pagina principale, vicino ad ogni post, deve esserci un pulsante che mi permette
  di cancellare quel determinato post.
 
-Ogni Entity, deve avere necessariamente un campo relativo all'istante di creazione.
+Ogni Entity, deve avere necessariamente un campo relativo all'istante di creazione. VVV
 
 Inoltre, voglio una pagina raggiungibile da /statistiche
 
@@ -39,3 +39,7 @@ Se c'è Stefano - Ricci, non posso inserire un altro stefano - ricci
 A prescindere da maiuscole e minuscole.
 
 Quindi anche se provo ad inserire un nuovo utente STEFANO - RICCI, non me lo deve aggiungere
+
+1- Nella pagina in cui vengono elencati tutti i post, i post dovranno essere mostrati IN ORDINE CRONOLOGICO DECRESCENTE  ossia, il più recente in alto.
+
+2- Nella pagina in cui c'è la lista degli utenti, (possibilmente in alto a destra) dovrà esserci un form, per FILTRARE GLI UTENTI IN BASE AL NOME
