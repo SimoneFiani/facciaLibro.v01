@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import it.fiani.facciaLibro.entity.Post;
 import it.fiani.facciaLibro.entity.Utente;
+import it.fiani.facciaLibro.service.PostService;
 import it.fiani.facciaLibro.service.UtenteService;
 
 @Controller
@@ -21,6 +23,8 @@ public class UtenteController {
 
 	@Autowired
 	UtenteService utenteService;
+	@Autowired
+	PostService postService;
 
 	@GetMapping("/")
 	public String index(Model datiInOutput) {
@@ -43,8 +47,18 @@ public class UtenteController {
 	@GetMapping("/{id}")
 	public String idUtente(@PathVariable Long id, Model datiInOutput) {
 		Utente utente = utenteService.cercaUtentePerId(id);
-		datiInOutput.addAttribute("utente", utente);
 
+		List<Post> listaPost = postService.mostraListaPost();
+
+		for (Post p : listaPost) {
+			if (p.getUtenteCreazione().getId() == id) {
+				utente.getListaPost().add(p);
+			}
+		}
+//		TODO: DA RIVEDERE, NON LEGGE LA LISTA DEI POST 
+
+		List<Post> listaPostUtente = utente.getListaPost();
+		datiInOutput.addAttribute("listaPostUtente", listaPostUtente);
 		return "templates.utente/dettagli-utente";
 	}
 

@@ -8,9 +8,19 @@
 
 <body>
 
-	<h1>Lista Utenti</h1>
-	
-	<p th:text="${utente}"> </p>
+	<h1>Info Utente</h1>
+
+	<h2 th:text="${utente.nome}"></h2> 
+	<br>
+ 	<table>
+		<tbody>
+			<tr th:each="p: ${listaPostUtente}">
+				<td th:text="${p.titolo}"></td>
+				<td th:text="${p.testoPost}"></td>
+				<td th:text="${p.dataCreazione}"></td>	
+			</tr>
+		</tbody>
+	</table>  
 	
 	<a href="/utenti/">torna alla home page utenti</a>
 

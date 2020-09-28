@@ -81,4 +81,11 @@ public class Post {
 		this.instanteUltimoAggiornamento = instanteUltimoAggiornamento;
 	}
 
+	@Override
+	public String toString() {
+		return "Post [id=" + id + ", titolo=" + titolo + ", testoPost=" + testoPost + ", dataCreazione=" + dataCreazione
+				+ ", instanteCreazione=" + instanteCreazione + ", instanteUltimoAggiornamento="
+				+ instanteUltimoAggiornamento + ", utenteCreazione=" + utenteCreazione + "]";
+	}
+
 }
