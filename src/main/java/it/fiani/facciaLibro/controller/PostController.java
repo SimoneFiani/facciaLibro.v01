@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -69,10 +68,11 @@ public class PostController {
 		return "templates.post/dettagli-post";
 	}
 
-	@DeleteMapping("/{id}")
+	@GetMapping("/{id}/delete")
 	public String cancellaPost(@PathVariable Long id) {
 		postService.cancellaPost(id);
-		return null;
+
+		return "redirect:/post/";
 	}
 
 }

@@ -51,13 +51,13 @@ public class UtenteController {
 		List<Post> listaPost = postService.mostraListaPost();
 
 		for (Post p : listaPost) {
-			if (p.getUtenteCreazione().getId() == id) {
+			if (p.getUtenteCreazione().getId().equals(id)) {
 				utente.getListaPost().add(p);
 			}
 		}
-//		TODO: DA RIVEDERE, NON LEGGE LA LISTA DEI POST 
 
 		List<Post> listaPostUtente = utente.getListaPost();
+		datiInOutput.addAttribute("utente", utente);
 		datiInOutput.addAttribute("listaPostUtente", listaPostUtente);
 		return "templates.utente/dettagli-utente";
 	}

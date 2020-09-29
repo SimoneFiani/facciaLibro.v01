@@ -17,10 +17,10 @@ Nella pagina principale, dovrà esserci un pulsante "Aggiungi", che mi farà apr
   e l'id di un utente esistente.VVV
 
 Nella pagina principale, se clicco sul nome di un utente, mi apre una pagina con i 
-dettagli di quell'utente, ed una lista di tutti i SUOI post.
+dettagli di quell'utente, ed una lista di tutti i SUOI post.VVV
 
 Nella pagina principale, vicino ad ogni post, deve esserci un pulsante che mi permette
- di cancellare quel determinato post.
+ di cancellare quel determinato post.VVV
 
 Ogni Entity, deve avere necessariamente un campo relativo all'istante di creazione. VVV
 

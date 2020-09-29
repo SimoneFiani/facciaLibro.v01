@@ -11,9 +11,11 @@
 	<h1>Info Utente</h1>
 
 	<h2 th:text="${utente.nome}"></h2> 
+	<p>lista post: </p>
 	<br>
  	<table>
 		<tbody>
+		
 			<tr th:each="p: ${listaPostUtente}">
 				<td th:text="${p.titolo}"></td>
 				<td th:text="${p.testoPost}"></td>
@@ -21,7 +23,7 @@
 			</tr>
 		</tbody>
 	</table>  
-	
+	<br>
 	<a href="/utenti/">torna alla home page utenti</a>
 
 </body>
