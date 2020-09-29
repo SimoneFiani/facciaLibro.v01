@@ -37,4 +37,9 @@ public class PostService {
 
 	}
 
+	public Long numeroPost() {
+		return postRepository.count();
+
+	}
+
 }

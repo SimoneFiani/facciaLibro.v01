@@ -38,4 +38,27 @@ public class UtenteService {
 
 	}
 
+	public Long numeroUtenti() {
+		return utenteRepository.count();
+	}
+
+	public String cognomeUtenteConPiuPost() {
+		List<Utente> listaUtenti = (List<Utente>) utenteRepository.findAll();
+
+		int count = 0;
+		String cognome = "c'è un problema XD";
+
+		for (Utente u : listaUtenti) {
+
+//    TODO: u.getListaPost().size() mi ritorna sempre zero... da verificare. 
+
+			if (u.getListaPost().size() > count) {
+				System.out.println(u.getCognome());
+				cognome = u.getCognome();
+			}
+		}
+
+		return cognome;
+	}
+
 }
