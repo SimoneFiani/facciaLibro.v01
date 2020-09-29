@@ -45,6 +45,9 @@ public class UtenteService {
 	public String cognomeUtenteConPiuPost() {
 		List<Utente> listaUtenti = (List<Utente>) utenteRepository.findAll();
 
+//		prendo un utente dalla lista, poi prendo la sua lista post, e torna sempre zero....
+		System.out.println(listaUtenti.get(1).getListaPost().size());
+
 		int count = 0;
 		String cognome = "c'è un problema XD";
 
@@ -53,7 +56,6 @@ public class UtenteService {
 //    TODO: u.getListaPost().size() mi ritorna sempre zero... da verificare. 
 
 			if (u.getListaPost().size() > count) {
-				System.out.println(u.getCognome());
 				cognome = u.getCognome();
 			}
 		}

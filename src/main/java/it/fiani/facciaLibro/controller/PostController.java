@@ -29,7 +29,6 @@ public class PostController {
 
 	@GetMapping("/")
 	public String indexPost(Model datiInOutput) {
-		System.out.println("HIT: /post/");
 		List<Post> listaPost = postService.mostraListaPost();
 		datiInOutput.addAttribute("listaPost", listaPost);
 		return "templates.facciaLibro/index-facciaLibro";
@@ -45,6 +44,7 @@ public class PostController {
 		String titolo = datiInInput.getParameter("titolo");
 		String testoPost = datiInInput.getParameter("testoPost");
 		Long idUtente = Long.parseLong(datiInInput.getParameter("idUtente"));
+
 		Post nuovoPost = new Post();
 		nuovoPost.setTitolo(titolo);
 		nuovoPost.setTestoPost(testoPost);

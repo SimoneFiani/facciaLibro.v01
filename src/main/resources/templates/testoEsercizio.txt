@@ -24,12 +24,12 @@ Nella pagina principale, vicino ad ogni post, deve esserci un pulsante che mi pe
 
 Ogni Entity, deve avere necessariamente un campo relativo all'istante di creazione. VVV
 
-Inoltre, voglio una pagina raggiungibile da /statistiche
+Inoltre, voglio una pagina raggiungibile da /statistiche VVV
 
 Questa pagina deve dirmi:
-- Il numero totale di post presenti
-- il numero totale di utenti registrati
-- il nome dell'utente che ha inserito più post
+- Il numero totale di post presenti VVV
+- il numero totale di utenti registrati VVV
+- il nome dell'utente che ha inserito più post XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 - Nuovo requisito:
 -- Implementare un controllo, che non permetta di inserire due utenti che hanno la stessa
