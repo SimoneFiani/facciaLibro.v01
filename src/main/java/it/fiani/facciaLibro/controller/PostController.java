@@ -51,6 +51,7 @@ public class PostController {
 
 		Utente utenteCreazione = utenteService.cercaUtentePerId(idUtente);
 		nuovoPost.setUtenteCreazione(utenteCreazione);
+		utenteCreazione.getListaPost().add(nuovoPost);
 
 		postService.salva(nuovoPost);
 

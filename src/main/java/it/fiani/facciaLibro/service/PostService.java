@@ -7,13 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import it.fiani.facciaLibro.entity.Post;
+import it.fiani.facciaLibro.entity.Utente;
 import it.fiani.facciaLibro.repository.PostRepository;
+import it.fiani.facciaLibro.repository.UtenteRepository;
 
 @Service
 public class PostService {
 
 	@Autowired
 	PostRepository postRepository;
+
+	@Autowired
+	UtenteRepository utenteRepository;
 
 	public List<Post> mostraListaPost() {
 		return (List<Post>) postRepository.findAll();
@@ -28,6 +33,13 @@ public class PostService {
 	}
 
 	public void cancellaPost(Long id) {
+
+		// TODO: devi rivederlo...
+
+		Post post = postRepository.findById(id).get();
+		Utente utente = post.getUtenteCreazione();
+		utente.getListaPost().remove(post);
+		utenteRepository.save(utente);
 		postRepository.deleteById(id);
 
 	}

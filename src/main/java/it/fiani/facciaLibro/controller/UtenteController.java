@@ -59,6 +59,9 @@ public class UtenteController {
 		List<Post> listaPostUtente = utente.getListaPost();
 		datiInOutput.addAttribute("utente", utente);
 		datiInOutput.addAttribute("listaPostUtente", listaPostUtente);
+
+		// TODO: vede due volte la lista sul dettaglio utente
+
 		return "templates.utente/dettagli-utente";
 	}
 
